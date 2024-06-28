@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Loja Toque De Mulher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-red-50">
+    <section id="carrinho" class="fixed top-0 right-[-360px] h-screen bg-red-200 w-[360px] text-black duration-500 border-l border-slate-200 p-5 flex flex-col justify-between z-10">
+        <div id="cabecalho-carrinho" class="flex justify-between m-3">
+            <p>Meu carrinho</p>
+            <button class="px-1 text-slate-700 hover:text-slate-900" id="fechar-carrinho"><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
+        <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2">
+        </section>
+        <p id="preco-total" class="bg-slate-200 text-green-800 rounded-sm pl-5">Total: $</p>
+            <a href="./compraFinalizada.html">
+                <button class="bg-red-300 text-slate-900 p-1 hover:bg-red-400"><i class="fa-solid fa-flag-checkered" style="color: #12161c;"></i> Finalizar Compra </button>
+            </a>
+    </section>
+    <header class='flex bg-red-100 justify-between'>
+        <a href="/index.html">
+            <img class="h-44" src="./Assets/logo/logo.png" alt="logo toque de mulher cosmeticos">
+        </a>
+        <div class="text-black flex gap-2 items-end mx-3">
+            
+            <form action="./pesquisa.html" method="GET" class="flex items-center">
+                <input type="text" name="query" placeholder="Pesquisar..." class="border rounded py-2 px-3 text-gray-700">
+            </form>
+            <a href="./pesquisa.html">
+                <button type="submit" class="mx-2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </a>
+            <a href="./login.html">
+                <button class="mx-2">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </a>
+            <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping mx-2"></i></button>
+        </div>
+    </header>
+    <nav>
+        <marquee class="text-white" direction="left">Desconto de <strong class="text-black">50%</strong> em todos os produtos da marca <strong class="text-black">Dior</strong></marquee>
+    </nav>
+    <main class="flex flex-col items-center">
+        <section id="filtros" class="p-10 flex">
+            <div class="px-2">
+                <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked>
+                <label for="exibir-todos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Todos</label>
+            </div>
+            <div class="px-2">
+                <input id="exibir-masculinos" type="radio" name="filtro" class="peer hidden">
+                <label for="exibir-masculinos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Masculinos</label>
+            </div>
+            <div class="px-2">
+                <input id="exibir-femininos" type="radio" name="filtro" class="peer hidden">
+                <label for="exibir-femininos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Femininos</label>
+            </div>
+        </section>
+        <section id="container-produto" class="flex flex-wrap place-content-center">  
+        </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>+

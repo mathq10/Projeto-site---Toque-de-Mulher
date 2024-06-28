@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Loja Toque De Mulher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-red-50">
+    <header class='flex bg-red-100 justify-between'>
+        <a href="/index.html">
+            <img class="h-44" src="./Assets/logo/logo.png" alt="logo toque de mulher cosmeticos">
+        </a>
+        <div class="text-black flex gap-2 items-end mx-3">
+            <a href="./login.html">
+                <button class="mx-2">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </a>
+            <a href="./produtos.html">
+                <button>produtos</button>
+            </a>
+        </div>
+    </header>
+    <nav>
+        <marquee class="text-white" direction="left">Desconto de <strong class="text-black">50%</strong> em todos os produtos da marca <strong class="text-black">Dior</strong></marquee>
+    </nav>
+    <main>
+    </main>
+    <script type="module" src="./main.js"></script>
+    <div id="slider" class="slider">
+        <div class="slides">
+           
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+           
+
+          
+            <div class="slide first">
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="slide produto 1">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=1998&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide produto 2">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide produto 3">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1557170334-a9632e77c6e4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide produto 4">
+            </div>
+            
+
+          
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+           
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

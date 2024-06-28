@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        
+        .bg-light-pink {
+            background-color: rgb(245, 209, 237);
+        }
+
+        .border-dark-pink {
+            border-color: #550d43;
+        }
+
+        .bg-dark-pink {
+            background-color: #550d43;
+        }
+
+        .bg-darker-pink {
+            background-color: #580739;
+        }
+    </style>
+</head>
+<header class='flex bg-red-100 justify-between' >
+    <a href="/index.html">
+        <img class="h-44" src="./Assets/logo/logo.png" alt="logo toque de mulher cosmeticos">
+    </a>
+</header>
+<nav class="bg-pink-200">
+    <marquee class="text-white" direction="left">Desconto de <strong class="text-black">50%</strong> em todos os produtos da marca <strong class="text-black">Dior</strong></marquee>
+</nav>
+<body class="bg-red-50 items-center justify-center h-screen">
+
+    <div class="flex flex-col p-40 items-center">
+    <form class="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-dark-pink" onsubmit="registrar(); return false;">
+        <h3 class="text-lg font-bold mb-4">Fazer registro</h3>
+        <input type="text" placeholder="Nome de Usuario" id="username" class="border-2 border-dark-pink rounded w-full py-2 px-3 text-gray-700 mb-4">
+        <input type="email" placeholder="E-mail" id="email" class="border-2 border-dark-pink rounded w-full py-2 px-3 text-gray-700 mb-4">
+        <input type="password" placeholder="Senha" id="senha" class="border-2 border-dark-pink rounded w-full py-2 px-3 text-gray-700 mb-4">
+        <input type="submit" value="Registrar" class="bg-dark-pink hover:bg-darker-pink text-white font-bold py-2 px-4 rounded cursor-pointer">
+    </form>
+    </div> 
+
+    <script>
+        function registrar() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+            
+            var validDomains = ['@gmail.com', '@hotmail.com', '@yahoo.com', '@outlook.com'];
+            var isValidEmail = validDomains.some(domain => email.endsWith(domain));
+
+            if (username !== "" && email !== "" && senha !== "") {
+                if (isValidEmail) {
+                    alert('Usuario registrado com sucesso!');
+                } else {
+                    alert('Por favor, use um email válido (@gmail.com, @hotmail.com, @yahoo.com, @outlook.com).');
+                }
+            } else {
+                alert('Preencha todos os campos corretamente.');
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
